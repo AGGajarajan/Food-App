@@ -1,0 +1,95 @@
+/* Main popup container */
+.login-popup {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color:none; /* Slightly adjusted for better visibility */
+  display: grid;
+  margin-bottom: 10px;
+  justify-items: center; /* Center the popup */
+}
+
+/* Login popup container with fixed size */
+.login-popup-container {
+  width: 400px; /* Set fixed width */
+  height: 500px; /* Set fixed height */
+  color: #808080;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  animation: FadeIn 0.5s;
+  overflow-y: auto; /* In case of overflow, allow scrolling */
+}
+
+/* Popup title area */
+.login-popup-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--dark);
+}
+
+.login-popup-title img {
+  width: 16px;
+  cursor: pointer;
+}
+
+/* Inputs container */
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-popup-inputs input {
+  outline: none;
+  border: 1px solid #c9c9c9;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* Submit button */
+.login-popup-container button {
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: var(--primary);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Terms and condition checkbox area */
+.login-popup-condition {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.login-popup-condition input {
+  margin-top: 5px;
+}
+
+/* Toggle sign up/login text */
+.login-popup p span {
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding-left: 4px;
+}
+
+/* Fade-in animation */
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
